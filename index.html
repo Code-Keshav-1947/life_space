@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeSpace Home</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- Google Fonts for crisp UI text -->
+    <link href="https://googleapis.com" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Hero Banner Area -->
+      <div class="head">
+        <img
+          src="IMG_20261011_142044.png"
+          alt="City Banner"
+          class="banner-img"
+        />
+        <div class="curve-overlay"></div>
+
+        <!-- Brand Logo Overlaid on Top -->
+      </div>
+
+      <!-- Active Main Content Body -->
+      <div class="content-body">
+        <!-- Emergency Trigger Button -->
+        <button class="emergencybtn">
+          <div class="btn-left">
+            <div class="phone-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.44 2.33.68 3.58.68a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.68 3.58a1 1 0 01-.27 1.11l-2.21 2.2z"
+                />
+              </svg>
+            </div>
+            <div class="btn-text">
+              <span class="label">EMERGENCY</span>
+              <span class="sub-label">Call 112</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- Location Selector Bar -->
+        <div class="location-bar">
+          <div class="loc-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="loc-details">
+            <span class="title">Your Location</span>
+            <span class="value">Bijnor, Uttar Pradesh</span>
+          </div>
+          <div class="arrow-icon">➔</div>
+        </div>
+
+        <!-- Features Grid Section -->
+        <div class="quick-access-section">
+          <h3>Quick Access</h3>
+          <div class="grid-container">
+            <div class="grid-item">
+              <div class="icon-wrapper red-bg">🏥</div>
+              <span class="name">Hospitals</span>
+              <span class="desc">Find nearby hospitals</span>
+            </div>
+
+            <div class="grid-item">
+              <div class="icon-wrapper blue-bg">🚑</div>
+              <span class="name">Ambulance</span>
+              <span class="desc">Get ambulance service</span>
+            </div>
+
+            <div class="grid-item">
+              <div class="icon-wrapper dark-blue-bg">👮</div>
+              <span class="name">Police Stations</span>
+              <span class="desc">Find nearby police stations</span>
+            </div>
+
+            <div class="grid-item">
+              <div class="icon-wrapper orange-bg">🚒</div>
+              <span class="name">Fire Stations</span>
+              <span class="desc">Find fire stations</span>
+            </div>
+
+            <div class="grid-item">
+              <div class="icon-wrapper green-bg">💊</div>
+              <span class="name">Pharmacies</span>
+              <span class="desc">Nearby medical stores</span>
+            </div>
+
+            <div class="grid-item">
+              <div class="icon-wrapper purple-bg">＋</div>
+              <span class="name">More Services</span>
+              <span class="desc">Other help & useful contacts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- In Danger Alert Component -->
+        <div class="danger-banner">
+          <div class="danger-left">
+            <div class="alert-icon">🔔</div>
+            <div class="danger-text">
+              <span class="main">In Danger?</span>
+              <span class="sub"
+                >Press and hold the SOS button for immediate help.</span
+              >
+            </div>
+          </div>
+          <div class="arrow-icon blue-text">➔</div>
+        </div>
+
+        <!-- App Footer Branding -->
+        <div class="footer-branding">LifeSpace • Safety • Support • Always</div>
+      </div>
+    </div>
+    <script src="./src/script/index.js"></script>
+  </body>
+</html>

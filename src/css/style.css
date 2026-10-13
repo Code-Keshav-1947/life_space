@@ -1,0 +1,342 @@
+:root {
+  --emergency-red: #ea2a2d;
+  --bg-light: #f4f6fa;
+  --text-dark: #1e2538;
+  --text-muted: #7c88a1;
+  --card-white: #ffffff;
+  --bg-dark: #1e2538;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container simulating a mobile view layout perfectly */
+.app-container {
+  width: 100%;
+  max-width: 412px;
+  height: 900px;
+  background-color: var(--bg-light);
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 32px;
+}
+
+/* Hide scrollbar tracking */
+.app-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Header image structural assembly */
+.head {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+/* Seamless curve cut configuration matching the UI mock */
+.curve-overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: var(--bg-light);
+  clip-path: ellipse(65% 100% at 50% 100%);
+  z-index: 2;
+}
+
+/* Floating brand identification layout details */
+.brand-container {
+  position: absolute;
+  top: 35px;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+}
+
+.logo-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #1d62f0, #00c6ff);
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.logo-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: white;
+}
+
+.brand-container h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #1a2b4c; /* Matches Dark Typography branding */
+  margin-bottom: 2px;
+}
+
+.brand-container .tagline {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Structured layout below header curve boundary */
+.content-body {
+  padding: 0 20px 30px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 4;
+}
+
+/* Large Rounded Emergency Pill Button configuration */
+.emergencybtn {
+  width: 100%;
+  background-color: var(--emergency-red);
+  border: none;
+  border-radius: 28px;
+  padding: 16px 24px;
+  box-shadow: 0 10px 24px rgba(234, 42, 45, 0.35);
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease;
+}
+
+.emergencybtn:active {
+  transform: scale(0.98);
+}
+
+.emergencybtn .btn-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+}
+
+.phone-icon {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-text .label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.btn-text .sub-label {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Interactive Location selection panel styling rules */
+.location-bar {
+  background-color: var(--card-white);
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.loc-icon {
+  color: #1d62f0;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.loc-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.loc-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.loc-details .title {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.loc-details .value {
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.arrow-icon {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Feature grid composition rules matching graphic mock */
+.quick-access-section h3 {
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.grid-item {
+  background-color: var(--card-white);
+  border-radius: 16px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Specialized theme configuration variants for categories */
+.red-bg { background-color: #ffebee; color: #e53935; }
+.blue-bg { background-color: #e3f2fd; color: #1e88e5; }
+.dark-blue-bg { background-color: #e8eaf6; color: #3f51b5; }
+.orange-bg { background-color: #fff3e0; color: #fb8c00; }
+.green-bg { background-color: #e8f5e9; color: #43a047; }
+.purple-bg { background-color: #f3e5f5; color: #8e24aa; }
+
+.grid-item .name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.grid-item .desc {
+  font-size: 9px;
+  color: var(--text-muted);
+  line-height: 1.3;
+  padding: 0 4px;
+}
+
+/* Dynamic Bottom SOS Action strip definition */
+.danger-banner {
+  background-color: #fff1f1;
+  border: 1px solid #ffdde0;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.danger-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alert-icon {
+  font-size: 20px;
+}
+
+.danger-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.danger-text .main {
+  font-size: 13px;
+  font-weight: 700;
+  color: #c62828;
+}
+
+.danger-text .sub {
+  font-size: 11px;
+  color: #e53935;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.blue-text {
+  color: #1d62f0;
+  font-weight: bold;
+}
+
+/* Basic structural brand typography alignment baseline at base */
+.footer-branding {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
